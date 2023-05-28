@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.collections.FXCollections?>
+<VBox xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo_gui.AddMovieController">
+
+    <Label text="Название фильма" />
+    <TextField fx:id="titleTextField" />
+
+    <Label text="Жанр" />
+    <ComboBox fx:id="genreComboBox">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="ACTION" />
+                <String fx:value="COMEDY" />
+                <String fx:value="DRAMA" />
+                <String fx:value="HORROR" />
+                <String fx:value="ROMANCE" />
+                <String fx:value="THRILLER" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <Label text="Длительность" />
+    <TextField fx:id="durationTextField" />
+
+    <Label text="Год выхода" />
+    <TextField fx:id="yearTextField" />
+
+    <Button text="Добавить" onAction="#addMovie" />
+    <Button text="Назад" onAction="#goBack" />
+</VBox>
